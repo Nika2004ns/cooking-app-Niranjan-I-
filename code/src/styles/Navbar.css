@@ -1,0 +1,157 @@
+.Navbar {
+    display: flex;
+    align-items: center;
+    height: 12vh;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: #070a00; /* Default background color */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    transition: background-color 0.5s ease, color 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions */
+}
+
+.Navbar.scrolled {
+    background-color: #333; /* Dark background when scrolled */
+    color: burlywood; /* Light text when scrolled */
+    box-shadow: rgba(170, 241, 156, 0.3) 0px 4px 12px; /* Darker shadow when scrolled */
+}
+
+.Navbar h3 {
+    padding-left: 4vw;
+    font-family: 'Whisper', cursive;
+    font-size: 2.3rem;
+    color: rgb(35, 209, 35); /* Default logo color */
+    cursor: pointer;
+    transition: color 0.5s ease; /* Smooth color transition */
+}
+
+.Navbar.scrolled h3 {
+    color: #fff; /* Light logo color when scrolled */
+}
+
+.Navbar .nav-options {
+    display: flex;
+    align-items: center;
+    padding-right: 3vw;
+    gap: 30px;
+}
+
+.Navbar ul {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.Navbar a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+}
+
+.Navbar ul li {
+    list-style: none;
+    cursor: pointer;
+    color: #807e7e; /* Default text color */
+    transition: color 0.5s ease, transform 0.3s ease; /* Smooth hover effect */
+    position: relative;
+}
+
+.Navbar.scrolled ul li {
+    color: #fff; /* Light text color when scrolled */
+}
+
+.Navbar ul li:hover {
+    color: rgb(35, 209, 35); /* Green text on hover */
+    transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+.Navbar ul li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: rgb(49, 71, 49);
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease; /* Underline animation */
+}
+
+.Navbar ul li:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    border: 1px solid #3f3f3faf;
+    padding: 3px;
+    border-radius: 2rem;
+    transition: border-color 0.5s ease, box-shadow 0.5s ease; /* Smooth transitions */
+}
+
+.Navbar.scrolled .nav-search {
+    border-color: #fff; /* Light border when scrolled */
+}
+
+.nav-search:hover {
+    border-color: rgb(35, 209, 35); /* Green border on hover */
+    box-shadow: 0 0 8px rgba(35, 209, 35, 0.3); /* Subtle glow effect */
+}
+
+.nav-search span {
+    display: flex;
+    align-items: center;
+}
+
+.nav-search-icon {
+    color: #807e7e; /* Default icon color */
+    padding-left: 5px;
+    transition: color 0.5s ease; /* Smooth color transition */
+}
+
+.Navbar.scrolled .nav-search-icon {
+    color: #fff; /* Light icon color when scrolled */
+}
+
+.nav-search:hover .nav-search-icon {
+    color: rgb(35, 209, 35); /* Green icon on hover */
+}
+
+.nav-search span input {
+    border: none;
+    padding: 5px;
+    width: 150px;
+    transition: width 0.3s ease; /* Smooth input expansion */
+    background-color: transparent; /* Transparent background */
+    color: inherit; /* Inherit text color */
+}
+
+.Navbar.scrolled .nav-search span input {
+    color: #fff; /* Light text color when scrolled */
+}
+
+.nav-search span input:focus {
+    outline: none;
+    width: 200px; /* Expand input on focus */
+}
+
+.nav-search button {
+    border-radius: 2rem;
+    padding: 0 10px;
+    border: none;
+    background-color: rgb(102, 110, 102);
+    color: aliceblue;
+    height: 4vh;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.Navbar.scrolled .nav-search button {
+    background-color: rgb(35, 209, 35); /* Green background when scrolled */
+}
+
+.nav-search button:hover {
+    background-color: rgb(35, 209, 35); /* Green background on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}

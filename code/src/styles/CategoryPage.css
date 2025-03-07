@@ -1,0 +1,138 @@
+.category-page {
+    padding-top: 14vh;
+    padding-bottom: 8vh;
+    min-height: 50vh;
+    background: linear-gradient(135deg, #f5f7fa, #9af184); /* Gradient background */
+    animation: gradientShift 10s infinite alternate; /* Background animation */
+}
+
+@keyframes gradientShift {
+    0% {
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    }
+    50% {
+        background: linear-gradient(135deg, #c3cfe2, #f5f7fa);
+    }
+    100% {
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    }
+}
+
+.categorypage-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.categorypage-head h2 {
+    font-weight: 500;
+    font-size: 2rem;
+    color: #333; /* Dark text color */
+    transition: color 0.5s ease; /* Smooth color transition */
+}
+
+.categorypage-head:hover h2 {
+    color: rgb(35, 209, 35); /* Green text on hover */
+}
+
+.categorypage-head-options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.categorypage-head-options p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #555; /* Subdued text color */
+}
+
+.categorypage-head-options span {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.categorypage-head-options span button {
+    width: 80px;
+    font-size: 0.7rem;
+    height: 6vh;
+    border: 1.5px solid #000;
+    border-radius: 0.3rem;
+    color: #000;
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.categorypage-head-options span button:hover {
+    background-color: #000;
+    color: aliceblue;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.food-items {
+    width: 90%;
+    margin: 3vh auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 3vh;
+    animation: slideUp 1s ease-in-out; /* Slide-up animation */
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.food-items .food-item {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 15px;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    background-color: #fff; /* White background for items */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.food-items .food-item:hover {
+    transform: translateY(-10px); /* Lift effect on hover */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px; /* Stronger shadow on hover */
+}
+
+.food-items .food-item img {
+    width: 100%;
+    height: 35vh;
+    border-radius: 0.7rem;
+    object-fit: cover; /* Ensure images fit well */
+}
+
+.food-items .food-item h4 {
+    margin: 10px 0 0 0;
+    font-weight: 400;
+    color: rgb(65, 134, 111);
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.food-items .food-item:hover h4 {
+    color: rgb(35, 209, 35); /* Green text on hover */
+}
